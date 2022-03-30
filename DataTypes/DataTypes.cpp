@@ -21,6 +21,7 @@ int main()
     const float TAX = 0.085;
     char initial;
 
+
     int ages[4]; 
     ages[0] = 24;
     ages[1] = 10;
