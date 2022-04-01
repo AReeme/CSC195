@@ -52,6 +52,6 @@ int main()
     int netIncome = gross - grossTax;
 
     cout << name << " worked " << totalHours << " hours at $" << wage << " an hour.\n";
-    cout << "gross income: $" << gross;
-    cout << "\nnet income: $" << netIncome;
+    cout << "gross income: $" << gross << endl;
+    cout << "net income: $" << netIncome << endl;
 }
