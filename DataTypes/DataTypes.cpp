@@ -8,14 +8,15 @@ using namespace std;
 
 int main()
 {
+    //Use the unsigned modifier for variable inputs that can not be negative
     string name;
     char initial;
-    int age;
+    unsigned int age;
     bool isAdult;
-    string zipcode;
+    unsigned int zipcode;
     float wage;
-    int daysWorked;
-    int hoursWorkedPerDay[10];
+    unsigned short daysWorked;
+    unsigned short hoursWorkedPerDay[7]; //[0][1][2][3][4][5][6]
     const float TAX = 0.1f;
     int totalHours = 0;
     
@@ -39,9 +40,9 @@ int main()
 
     cout << "enter days worked: ";
     cin >> daysWorked;
-    for (int i = 1; i < daysWorked + 1; i++)
+    for (int i = 0; i < daysWorked; i++)
     {
-        cout << "enter hours worked for day " << i << ": ";
+        cout << "enter hours worked for day " << i + 1 << ": ";
         cin >> hoursWorkedPerDay[i];
         totalHours = totalHours + hoursWorkedPerDay[i];
     }
