@@ -1,12 +1,13 @@
 #include "Employee.h"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 int main()
 {
 
-    Employee employees[5];
+    vector<Employee> employees;
     unsigned int numEmployees;
 
     cout << "Number of employees: ";
@@ -16,7 +17,9 @@ int main()
     {
         cout << "Information For Employee " << i + 1 << ": " << endl;
         
-        employees[i].Read();
+        Employee x;
+        x.Read();
+        employees.push_back(x);
        
     }
 
