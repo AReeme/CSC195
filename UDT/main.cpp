@@ -30,4 +30,9 @@ int main()
         employees[i].Write();
 
     }
+
+    for (int i = 0; i < numEmployees; i++)
+    {
+        employees.clear();
+    }
 }

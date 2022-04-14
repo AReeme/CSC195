@@ -1,19 +1,32 @@
 #include <iostream>
 using namespace std;
 
-void OhNo(int size)
-{
-	char* block = new char[1000000000];
-	cout << size << endl;
-	OhNo(size + 10000);
-}
+//void OhNo(int size)
+//{
+//	char* block = new char[10000];
+//	cout << size << endl;
+//	delete[] block;
+//	OhNo(size + 10000);
+//}
 
 int main()
 {
-	OhNo(1000000000);
-
-	bool b = true;
+	/*OhNo(10000);*/
+	bool b = true; //Bool Value (1-Byte)
 	int i = 67;
+	int j = 90;
+	int* pi = &i; // <- Address (4-Bytes)
+	*pi = 75;
+	pi = &j;
+	*pi = 54;
+
+	cout << sizeof(pi) << endl;
+	cout << &i << endl;
+	cout << pi << endl;
+	cout << *pi << endl;
+	cout << i << endl;
+	cout << j << endl;
+
 	
 	cout << &i << endl;
 	cout << &b << endl;
