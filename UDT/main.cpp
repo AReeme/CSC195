@@ -6,8 +6,8 @@ using namespace std;
 
 int main()
 {
-
-    vector<Employee> employees;
+    Employee* x = new Employee;
+    vector<Employee*> employees;
     unsigned int numEmployees;
 
     cout << "Number of employees: ";
@@ -17,9 +17,7 @@ int main()
     {
         cout << "Information For Employee " << i + 1 << ": " << endl;
         
-        Employee x;
-        x.Read();
-        employees.push_back(x);
+        x->Read();
        
     }
 
@@ -27,7 +25,7 @@ int main()
     {
         cout << "Information For Employee " << i + 1 << ": " << endl;
         
-        employees[i].Write();
+        x->Write();
 
     }
 
