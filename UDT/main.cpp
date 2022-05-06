@@ -6,7 +6,6 @@ using namespace std;
 
 int main()
 {
-    Employee* x = new Employee;
     vector<Employee*> employees;
     unsigned int numEmployees;
 
@@ -16,8 +15,10 @@ int main()
     for (int i = 0; i < numEmployees; i++)
     {
         cout << "Information For Employee " << i + 1 << ": " << endl;
+        Employee* x = new Employee;
         
         x->Read();
+        employees.push_back(x);
        
     }
 
@@ -25,12 +26,13 @@ int main()
     {
         cout << "Information For Employee " << i + 1 << ": " << endl;
         
-        x->Write();
+        employees[i]->Write();
 
     }
 
     for (int i = 0; i < numEmployees; i++)
     {
-        employees.clear();
+        delete employees[i];
     }
+        employees.clear();
 }
