@@ -63,7 +63,9 @@ int main()
 	Point p1(8.3f, 2.5f);
 	Point p2(5.3f, 3.3f);
 
-	Point p3 = p1 - p2;
+	p1.Add(p2);
+
+	Point p3 = p1 + p2;
 	p3.Print();
 
 	cout << (p1 < p2) << endl;
